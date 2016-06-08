@@ -152,8 +152,8 @@ public final class ClassicParser implements IParser {
     }
 
     private void errorAtPosition(String msg) throws ParseException{
-        StringBuilder sb = new StringBuilder().append(String.format("Error at position %d : %s", currentToken.getOffset(), msg));
-        error(sb.toString(),currentToken.getOffset());
+        String fullMsg = String.format("Error at position %d : %s", currentToken.getOffset(), msg);
+        error(fullMsg, currentToken.getOffset());
     }
 
     private void error(String msg, int pos) throws ParseException{

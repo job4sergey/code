@@ -52,9 +52,9 @@ public class ArithmeticTest extends TestBase {
 		Assert.assertEquals(expected, e_val(expr));
 	}
 	
-	private Double evalByJs(String expr) throws ScriptException {
-        Double r = (Double)e.eval(expr);
-		return r;
+	private Number evalByJs(String expr) throws ScriptException {
+		Number n = (Number)e.eval(expr);
+		return n.doubleValue();
 	}
 	
 	private Double e_val(String expr) throws ScriptException {
